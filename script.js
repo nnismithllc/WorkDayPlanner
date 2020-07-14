@@ -1,24 +1,23 @@
-let workDay = {
-  "8 A.M.": "",
-  "9 A.M.": "",
-  "10 A.M.": "",
-  "11 A.M.": "",
-  "12 P.M.": "",
-  "1 P.M.": "",
-  "2 P.M.": "",
-  "3 P.M.": "",
-  "4 P.M.": "",
-  "5 P.M.": "",
+let workSch = {
+  "8AM": "",
+  "9AM": "",
+  "10AM": "",
+  "11AM": "",
+  "12PM": "",
+  "1PM": "",
+  "2PM": "",
+  "3PM": "",
+  "4PM": "",
+  "5PM": "",
 };
 
 $(document).ready(function(){
-  if(!localStorage.getItem('workDay')) {
+  if(!localStorage.getItem('workSch')) {
     updateCalendarTasks(workDay);
   } else {
-    updateCalendarTasks(JSON.parse(localStorage.getItem('workDay')));
+    updateCalendarTasks(JSON.parse(localStorage.getItem('workSch')));
   }
 })
-
 
 $('#date-today h6').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm:ss a'));
 
@@ -49,46 +48,46 @@ $("button").click(function() {
 
 function hourNumberFromHourString(hourString) {
   switch(hourString) {
-    case "8 AM": return 8;
-    case "9 AM": return 9;
-    case "10 AM": return 10;
-    case "11 AM": return 11;
-    case "12 PM": return 12;
-    case "1 PM": return 13;
-    case "2 PM": return 14;
-    case "3 PM": return 15;
-    case "4 PM": return 16;
-    case "5 PM": return 17;
+    case "8AM": return 8;
+    case "9AM": return 9;
+    case "10AM": return 10;
+    case "11AM": return 11;
+    case "12PM": return 12;
+    case "1PM": return 13;
+    case "2PM": return 14;
+    case "3PM": return 15;
+    case "4PM": return 16;
+    case "5PM": return 17;
   }
 }
 
 function loadCorrectDataset() {
-  result = localStorage.getItem('workDay')
+  result = localStorage.getItem('workSch')
   return (result ? result : workDay);
 }
 
 function initializeLocalStorage() {
-  localStorage.setItem('workDay', JSON.stringify(workDay));
+  localStorage.setItem('workSch', JSON.stringify(workDay));
 };
 
 function saveToLocalStorage(dayObj) {
-  localStorage.setItem('workDay', JSON.stringify(dayObj));
+  localStorage.setItem('workSch', JSON.stringify(dayObj));
 }
 
 function saveSchedule(hourString, val) {
-  if(!localStorage.getItem('workDay')) {
+  if(!localStorage.getItem('workSch')) {
     initializeLocalStorage();
   }
 
-  let workHours = JSON.parse(localStorage.getItem('workDay'));
+  let workHours = JSON.parse(localStorage.getItem('workSch'));
   workHours[hourString] = val
 
   saveToLocalStorage(workHours);
 }
 
 function updateCalendarTasks(dayObject) {
-  $ (".calendar-row").each(function(index) {
-    
+  $(".calendar-row").each(function(index) {
     let res = $(this).children("div");
     $(this).children("textarea").text(dayObject[res.text()]);
-;)}
+  })
+}
