@@ -3,7 +3,6 @@
 var timein =$(this).parent().attr("id")
 localStorage.setItem(timein, textEntry1.value)
 
-
 // Ready Function for Storage and Get/Set Item Information per Hour
 $(document).ready(function(){
   

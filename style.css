@@ -2,9 +2,15 @@ textarea {
     resize: none;
   }
 
+  .jumbotron {
+    margin-top: 20px;
+  background-color: rgb(47, 47, 199);
+background-size: cover;
+  }
+
   .one {
-    background-color: rebeccapurple;
-    color: blue;
+    background-image: url(https://thumbs.dreamstime.com/b/abstract-multi-colored-oil-painting-full-frame-background-painted-real-canvas-hand-158822637.jpg);
+    color: rgb(12, 17, 17);
   }
 
   .pastHour{
@@ -21,7 +27,7 @@ textarea {
   }
   
 
-  button {
+  .button {
     background-color: darkturquoise;
     border-radius: 0px 5px 5px 0px;
   }
