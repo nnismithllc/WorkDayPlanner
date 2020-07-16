@@ -88,16 +88,23 @@ $('#date-today h6').text(moment().format('dddd') + ", " + moment().format('MMMM 
 // Block Coding by Time - Past, Present, Future
 function currentTime () {
   let presentHour = moment().hour();
-  $(".time").each(function(){
-  console.log(".time")
-  
+  $(".time").each(function(index,element){
+
+  // Get the element time
+  var timein = parseInt($(this).attr("id").split("-")[0]);
+
+  // Convert to 24 hour time
+  if(timein < 8){
+    timein += 12;
+  }
 
   // Conditional Statements Concerning Time
-  var timein = parseInt($(this.attr("id").split("-")[1]));
-  if (timein < currentTime) {$(this).addClass("pastHour");}
-    else if (timein === currentTime){
+  if (timein < presentHour) {
+    $(this).addClass("pastHour");
+  }
+  else if (timein === presentHour){
       $(this).addClass("presentHour");
-    }
+  }
     else {$(this).addClass("futureHour")}
   });
 
@@ -105,4 +112,16 @@ function currentTime () {
 
 // Reset Button Function
 function myFunction() {
-document.getElementById("forms").reset();}
+  console.log("Hiiii :)");
+
+  // Set the value of each text area to empty string
+  $(".forms").val("");
+
+  // For each textarea
+  for(let i = 1; i <= 10; i++){
+
+    // Set the local storage item to empty string
+    localStorage.setItem("item-" + i, "");
+
+  }
+}

@@ -16,7 +16,7 @@
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 <!-- WorkDay Title -->
     <title>Work Day Scheduler</title>
   </head>
@@ -29,7 +29,7 @@
         <h5>A Simple Calendar for Scheduling Your Workday</h5>
       </div>
       <div class="row justify-content-center" id="date-today"><h6></h6>
-        <input type="button" form id="forms" onclick="myFunction()" value="Reset Form">
+        <input type="button" onclick="myFunction()" value="Reset Form">
       </form>
       </div>
     </header>
@@ -38,81 +38,81 @@
       <div
         id="calendar-row1"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="8am" class="col-md-1">Floating Notes For Today</div>
-        <textarea rows="3" id="textEntry1" data-store="1" class="col-md-6"></textarea>
+        <div id="8-am" class="col-md-1">Floating Notes For Today</div>
+        <textarea rows="3" id="textEntry1" data-store="1" class="col-md-6 forms"></textarea>
         <button id="save1" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <!-- Div Rows and Textarea Entry Logs by Time -->
       <div
-        id="calendar-row2"
+        id="calendar-row2" 
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="9am" class="col-md-1">9 AM</div>
-        <textarea rows="3" id="textEntry2" data-store="2" class="col-md-6"></textarea>
+        <div id="9-am" class="col-md-1 time">9 AM</div>
+        <textarea rows="3" id="textEntry2" data-store="2" class="col-md-6 forms"></textarea>
         <button id="save2" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row3"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="10am" class="col-md-1">10 AM</div>
-        <textarea rows="3" id="textEntry3" data-store="3" class="col-md-6"></textarea>
+        <div id="10-am" class="col-md-1 time">10 AM</div>
+        <textarea rows="3" id="textEntry3" data-store="3" class="col-md-6 forms"></textarea>
         <button id="save3" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row4"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="11am" class="col-md-1">11 AM</div>
-        <textarea rows="3" id="textEntry4" data-store="4" class="col-md-6"></textarea>
+        <div id="11-am" class="col-md-1 time">11 AM</div>
+        <textarea rows="3" id="textEntry4" data-store="4" class="col-md-6 forms"></textarea>
         <button id="save4" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row5"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="12pm" class="col-md-1">12 PM</div>
-        <textarea rows="3" id="textEntry5" data-store="5" class="col-md-6"></textarea>
+        <div id="12-pm" class="col-md-1 time">12 PM</div>
+        <textarea rows="3" id="textEntry5" data-store="5" class="col-md-6 forms"></textarea>
         <button id="save5" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row6"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="1pm" class="col-md-1 time">1 PM</div>
-        <textarea rows="3" id="textEntry6" data-store="6" class="col-md-6"></textarea>
+        <div id="1-pm" class="col-md-1 time">1 PM</div>
+        <textarea rows="3" id="textEntry6" data-store="6" class="col-md-6 forms"></textarea>
         <button id="save6" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row7"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="2" class="col-md-1 time">2 PM</div>
-        <textarea rows="3" id="textEntry7" data-store="7" class="col-md-6"></textarea>
+        <div id="2-pm" class="col-md-1 time">2 PM</div>
+        <textarea rows="3" id="textEntry7" data-store="7" class="col-md-6 forms"></textarea>
         <button id="save7" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row8"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="3" class="col-md-1 time">3 PM</div>
-        <textarea rows="3" id="textEntry8" data-store="8" class="col-md-6"></textarea>
+        <div id="3-pm" class="col-md-1 time">3 PM</div>
+        <textarea rows="3" id="textEntry8" data-store="8" class="col-md-6 forms"></textarea>
         <button id="save8" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row9"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="4" class="col-md-1">4 PM</div>
-        <textarea rows="3" id="textEntry9" data-store="9" class="col-md-6"></textarea>
+        <div id="4-pm" class="col-md-1 time">4 PM</div>
+        <textarea rows="3" id="textEntry9" data-store="9" class="col-md-6 forms"></textarea>
         <button id="save9" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
       <div
         id="calendar-row10"
         class="row justify-content-md-center border-top border-bottom calendar-row">
-        <div id="5pm" class="col-md-1">5 PM</div>
-        <textarea rows="3" id="textEntry10" data-store="10" class="col-md-6"></textarea>
+        <div id="5-pm" class="col-md-1 time">5 PM</div>
+        <textarea rows="3" id="textEntry10" data-store="10" class="col-md-6 forms"></textarea>
         <button id="save10" class="btn btn-primary" type="save">SAVE</button>
       </div>
 
