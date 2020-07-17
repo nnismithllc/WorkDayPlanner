@@ -14,16 +14,16 @@ background-size: cover;
   }
 
   .pastHour{
-    background-color: blueviolet;
-    border-color: blue;
+    background-color: crimson;
+    border-color: crimson;
   }
   .presentHour {
     background-color: rgb(76, 245, 76);
     border-color:rgb(76, 245, 76);
   }
   .futureHour {
-    background-color:crimson;
-    border-color: crimson;
+    background-color:blueviolet;
+    border-color: blueviolet;
   }
   
 
@@ -42,7 +42,7 @@ background-size: cover;
   }
 
   #textEntry1 {
-    background-color: rgb(66, 61, 61);
+    background-color:orangered;
     color: white;
   
   }

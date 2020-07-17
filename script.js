@@ -88,6 +88,10 @@ function currentTime() {
      $(".time").each(function(index, element) {
     var timein = parseInt($(this).attr("id").split("-")[0]);
 
+    if (timein <8){
+      timein += 12;
+    }
+
   if (timein < presentHour) {
      $(this).addClass("pastHour");
 } else if (timein === presentHour) {
