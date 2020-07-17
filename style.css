@@ -18,12 +18,12 @@ background-size: cover;
     border-color: blue;
   }
   .presentHour {
-    background-color: crimson;
-    border-color: crimson;
+    background-color: rgb(76, 245, 76);
+    border-color:rgb(76, 245, 76);
   }
   .futureHour {
-    background-color: rgb(90, 177, 90);
-    border-color: rgb(41, 136, 41);
+    background-color:crimson;
+    border-color: crimson;
   }
   
 
@@ -39,4 +39,18 @@ background-size: cover;
   
   button {
     font-size: 22em;
+  }
+
+  #textEntry1 {
+    background-color: rgb(66, 61, 61);
+    color: white;
+  
+  }
+
+  #eight {
+    background-color:rgb(66, 61, 61);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    
   }
