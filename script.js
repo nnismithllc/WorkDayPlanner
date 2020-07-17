@@ -1,13 +1,12 @@
 // Local Storage setItem Information
-
 var timein =$(this).parent().attr("id")
 localStorage.setItem(timein, textEntry1.value)
 
 // Ready Function for Storage and Get/Set Item Information per Hour
-$(document).ready(function(){
+  $(document).ready(function(){
   
   $("*[data-store]").each(function () {
-    $(this).val(localStorage.getItem("item-" + $(this).attr("data-store")));
+  $(this).val(localStorage.getItem("item-" + $(this).attr("data-store")));
   });
   
   $("#save1").on("click", function (itm) {
@@ -76,8 +75,7 @@ $(document).ready(function(){
   $("#save10").on("click", function (itm) {
     localStorage.setItem ("item-" + $("#textEntry10").attr("data-store"), textEntry10.value);
   });
-
-})
+  })
 
 
 // Moment in Time Coding in Header
@@ -85,41 +83,38 @@ $('#date-today h6').text(moment().format('dddd') + ", " + moment().format('MMMM 
 
 
 // Block Coding by Time - Past, Present, Future
-function currentTime () {
-  let presentHour = moment().hour();
-  $(".time").each(function(index,element){
+function currentTime() {
+  let presentHour = moment().hours();
+     $(".time").each(function(index, element) {
+    var timein = parseInt($(this).attr("id").split("-")[0]);
 
-  // Get the element time
-  var timein = parseInt($(this).attr("id").split("-")[0]);
-
-  // Convert to 24 hour time
-  if(timein < 8){
-    timein += 12;
-  }
-
-  // Conditional Statements Concerning Time
   if (timein < presentHour) {
-    $(this).addClass("pastHour");
-  }
-  else if (timein === presentHour){
-      $(this).addClass("presentHour");
-  }
-    else {$(this).addClass("futureHour")}
+     $(this).addClass("pastHour");
+} else if (timein === presentHour) {
+     $(this).removeClass("pastHour");
+     $(this).addClass("presentHour");
+} else {
+     $(this).removeClass("pastHour");
+     $(this).removeClass("presentHour");
+     $(this).addClass("futureHour");
+      }
   });
-
 }
+
+currentTime();
+var checkTime = setInterval(currentTime, 15000);
+
 
 // Reset Button Function
 function myFunction() {
-  console.log("Hiiii :)");
 
-  // Set the value of each text area to empty string
+  // Set the Value of Each Text Area to Empty String
   $(".forms").val("");
 
-  // For each textarea
+  // For Each Textarea
   for(let i = 1; i <= 10; i++){
 
-    // Set the local storage item to empty string
+  // Set the Local Storage Item to Empty String
     localStorage.setItem("item-" + i, "");
 
   }

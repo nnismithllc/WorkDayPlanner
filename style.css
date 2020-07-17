@@ -14,8 +14,8 @@ background-size: cover;
   }
 
   .pastHour{
-    background-color: rgb(197, 207, 138);
-    border-color: gray;
+    background-color: blueviolet;
+    border-color: blue;
   }
   .presentHour {
     background-color: crimson;
