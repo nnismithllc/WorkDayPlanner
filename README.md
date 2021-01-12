@@ -11,9 +11,9 @@ You need internet access to operate this file. If you are trying to edit the dat
 
 ## Usage 
 
-Use application to plan your daily schedule notes and information for your 9am-5pm time-blocks. Time blocks are color coordinated to reference current, future, and past. 
+Use application to plan your daily schedule notes and information for your 9am-5pm time-blocks. Time blocks are color coordinated to reference current, future, and past time blocks. 
 
-![image](https://user-images.githubusercontent.com/65423204/104279379-3233db00-5478-11eb-8e2a-7ca699b8f2f9.png)
+![image](https://user-images.githubusercontent.com/65423204/104279711-c0a85c80-5478-11eb-857a-626d0cf927bb.png)
 
 
 
